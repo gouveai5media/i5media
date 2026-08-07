@@ -1,5 +1,16 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const mainNav = document.querySelector('.nav');
+if (mainNav && !mainNav.querySelector('[data-layout-switch]')) {
+  const layout2Link = document.createElement('a');
+  layout2Link.href = 'layout2.html';
+  layout2Link.textContent = 'Layout 2';
+  layout2Link.dataset.layoutSwitch = 'true';
+  layout2Link.style.color = '#8ab7ff';
+  layout2Link.style.fontWeight = '700';
+  mainNav.appendChild(layout2Link);
+}
+
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
