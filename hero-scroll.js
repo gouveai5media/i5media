@@ -1,4 +1,8 @@
 (() => {
+  document.querySelectorAll('a[href="#projetos"]').forEach((link) => link.remove());
+  const projectsSection = document.querySelector('.projects');
+  if (projectsSection) projectsSection.remove();
+
   const hero = document.querySelector('.hero');
   const card = document.querySelector('[data-story-card]');
   if (hero && card) {
