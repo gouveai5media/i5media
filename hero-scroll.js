@@ -3,6 +3,16 @@
   const projectsSection = document.querySelector('.projects');
   if (projectsSection) projectsSection.remove();
 
+  const nav = document.querySelector('.header nav');
+  if (nav && !nav.querySelector('a[href="briefing.html"]')) {
+    const link = document.createElement('a');
+    link.href = 'briefing.html';
+    link.textContent = 'Briefing';
+    link.style.fontWeight = '700';
+    link.style.color = '#155cff';
+    nav.appendChild(link);
+  }
+
   const hero = document.querySelector('.hero');
   const card = document.querySelector('[data-story-card]');
   if (hero && card) {
