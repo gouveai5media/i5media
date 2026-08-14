@@ -59,7 +59,7 @@
   if (!document.querySelector('link[data-clients-style]')) {
     const css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = 'clients.css';
+    css.href = 'clients.css?v=20260814-2';
     css.dataset.clientsStyle = 'true';
     document.head.appendChild(css);
   }
@@ -81,16 +81,15 @@
         <p>Cada logo representa um projeto, uma relação e um resultado construído com propósito.</p>
       </div>
       <div class="clients-grid reveal">
-        <article class="client-logo-card"><img src="assets/clients/abracon.webp" alt="Abracon" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/all-parmegiana.webp" alt="All Parmegiana" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/arq-designer.webp" alt="Arq Designer" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/trison.webp" alt="Trison" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/nutricar.webp" alt="Nutricar" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/mundo-verde.webp" alt="Mundo Verde" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/jbs.webp" alt="JBS" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/soccer-grass.webp" alt="Arena Soccer Grass Alphaville" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/chute-inicial.webp" alt="Chute Inicial Corinthians" loading="lazy"></article>
-        <article class="client-logo-card"><img src="assets/clients/super-muffato.webp" alt="Super Muffato" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/jbs.webp?v=2" alt="JBS" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/super-muffato.webp?v=2" alt="Muffato" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/chute-inicial.webp?v=2" alt="Chute Inicial Corinthians" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/soccer-grass.webp?v=2" alt="Soccer Grass" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/all-parmegiana.webp?v=2" alt="All Parmegiana" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/xp-investimentos.svg?v=2" alt="XP Investimentos" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/abracon.webp?v=2" alt="Abracon" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/nutricar.webp?v=2" alt="Nutricar" loading="lazy"></article>
+        <article class="client-logo-card"><img src="assets/clients/mundo-verde.webp?v=2" alt="Mundo Verde" loading="lazy"></article>
       </div>
       <div class="clients-proof reveal">
         <span>ESTRATÉGIA • DESIGN • TECNOLOGIA • PERFORMANCE</span>
