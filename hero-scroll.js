@@ -1,4 +1,21 @@
 (() => {
+  const I5_WHATSAPP = '5511998290083';
+  const I5_PHONE = '11 99829-0083';
+  document.querySelectorAll('a[href*="wa.me/"], a[href^="tel:"]').forEach((link) => {
+    if (link.href.includes('wa.me/')) {
+      const query = link.href.includes('?') ? link.href.slice(link.href.indexOf('?')) : '';
+      link.href = `https://wa.me/${I5_WHATSAPP}${query}`;
+    } else {
+      link.href = `tel:+${I5_WHATSAPP}`;
+    }
+  });
+  const oldPhones = ['11 99893-97691','11 99893 97691','119989397691','11 99893-9769','11998939769','55119989397691'];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    oldPhones.forEach((oldPhone) => { if (node.nodeValue.includes(oldPhone)) node.nodeValue = node.nodeValue.split(oldPhone).join(I5_PHONE); });
+  }
+
   document.querySelectorAll('a[href="#projetos"]').forEach((link) => link.remove());
   const projectsSection = document.querySelector('.projects');
   if (projectsSection) projectsSection.remove();
