@@ -1,4 +1,21 @@
 (() => {
+  const I5_WHATSAPP = '5511998290083';
+  const I5_PHONE = '11 99829-0083';
+  document.querySelectorAll('a[href*="wa.me/"], a[href^="tel:"]').forEach((link) => {
+    if (link.href.includes('wa.me/')) {
+      const query = link.href.includes('?') ? link.href.slice(link.href.indexOf('?')) : '';
+      link.href = `https://wa.me/${I5_WHATSAPP}${query}`;
+    } else {
+      link.href = `tel:+${I5_WHATSAPP}`;
+    }
+  });
+  const oldPhones = ['11 99893-97691','11 99893 97691','119989397691','11 99893-9769','11998939769','55119989397691'];
+  const phoneWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let phoneNode;
+  while ((phoneNode = phoneWalker.nextNode())) {
+    oldPhones.forEach((oldPhone) => { if (phoneNode.nodeValue.includes(oldPhone)) phoneNode.nodeValue = phoneNode.nodeValue.split(oldPhone).join(I5_PHONE); });
+  }
+
   const form = document.getElementById('briefingForm');
   if (!form) return;
 
