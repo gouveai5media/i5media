@@ -1,28 +1,22 @@
-# I5Media — Digital Experience Studio
+# Site ATLAS Gestão Empresarial Inteligente
 
-Site conceito futurista da I5Media.
+Site estático em HTML, CSS e JavaScript, pensado para hospedagem compartilhada da Hostinger.
 
-## Conceito
+## Estrutura
 
-Uma experiência digital imersiva com:
+- `index.html`: página inicial
+- `sobre.html`: apresentação institucional
+- `planos.html`: modalidades mensais sem preços
+- `servicos/`: catálogo e páginas individuais dos nove serviços
+- `contato.html`: formulário que prepara a solicitação no WhatsApp
+- `assets/`: identidade visual, estilos e interações
 
-- direção visual dark / electric blue
-- partículas e profundidade
-- parallax com movimento do cursor
-- objetos e cards flutuantes
-- elementos orbitais
-- cards com tilt 3D
-- reveal animations no scroll
-- marquee animado
-- interface responsiva
-- suporte a `prefers-reduced-motion`
+## Publicação na Hostinger
 
-## Stack
+Envie o conteúdo da pasta `atlas-site` (ou os arquivos desta pasta no GitHub) para a pasta do domínio/subdomínio desejado em `public_html`. A página inicial é `index.html`; não há build nem banco de dados.
 
-HTML5, CSS3 e JavaScript puro, sem dependências de framework.
+## Configurar o contato
 
-## Publicação
+Antes de publicar, abra `assets/main.js` e preencha a variável `number` com o WhatsApp comercial da ATLAS, somente com DDI e DDD e sem `+`, espaços ou pontuação (por exemplo, `5511999999999`). Até essa configuração, o link abre o WhatsApp com o texto preparado para a pessoa escolher para quem enviar.
 
-O repositório inclui um workflow em `.github/workflows/pages.yml` para publicação via GitHub Pages.
-
-No GitHub, abra **Settings → Pages → Build and deployment** e selecione **GitHub Actions** como fonte de publicação caso ainda não esteja habilitado.
+Os valores comerciais do PDF de referência não foram publicados no site; os planos apresentam somente escopo e capacidade.
